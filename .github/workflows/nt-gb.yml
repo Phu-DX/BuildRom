@@ -8,7 +8,7 @@ on:
         required: true
 
 jobs:
-  Build_Status:
+  Working_Status:
     runs-on: ubuntu-22.04
     steps:
       - name: Clean All Junk,App
@@ -55,7 +55,6 @@ jobs:
           sudo pip3 install google-api-python-client
           sudo pip3 install google-auth-httplib2
           
-          
       - name: Install OpenJDK
         uses: actions/setup-java@v4
         with:
@@ -72,5 +71,5 @@ jobs:
           INPUT_URL: ${{ inputs.input_url }}
         run: |
           cd maianh_hybird_tool
-          sudo bash caramelCN.sh "$INPUT_URL"
+          sudo bash caramelGB.sh "$INPUT_URL"
       
