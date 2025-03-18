@@ -9,7 +9,7 @@ on:
 
 jobs:
   Build_Status:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: Clean All Junk,App
         run: |
