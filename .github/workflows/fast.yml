@@ -1,0 +1,34 @@
+name: Xiaomi MIUI/HyperOS Build Fast
+
+on:
+  workflow_dispatch:
+    inputs:
+      input_url:
+        description: 'URL of the file to build'
+        required: true
+
+jobs:
+  Build_Status:
+    runs-on: self-hosted
+    steps:
+    
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Checkout WORKSPACE
+        run: |
+          
+          git clone https://${{ secrets.PRIVATEP_TOKEN }}@github.com/Hma1984/maianh_hybird_tool.git
+          
+      - name: Giving Premission
+        run: |
+          cd maianh_hybird_tool
+          sudo chmod 777 -R *
+
+      - name: Working...
+        env:
+          INPUT_URL: ${{ inputs.input_url }}
+        run: |
+          cd maianh_hybird_tool
+          sudo bash build.sh "$INPUT_URL"
+      
