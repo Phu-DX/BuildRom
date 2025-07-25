@@ -10,7 +10,7 @@ on:
 jobs:
   Build_Status:
     runs-on: self-hosted
-   steps:
+    steps:
       - name: Clean All Junk,App
         run: |
           docker rmi `docker images -q` || true
@@ -69,3 +69,4 @@ jobs:
         run: |
           cd maianh_hybird_tool
           sudo bash build.sh "$INPUT_URL"
+      
