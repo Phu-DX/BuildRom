@@ -8,7 +8,7 @@ on:
         required: true
       input_user:
         description: 'Input build user to build'
-        required: true
+        required: false
 
 jobs:
   Build_Status:
