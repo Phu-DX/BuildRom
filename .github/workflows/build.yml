@@ -6,6 +6,9 @@ on:
       input_url:
         description: 'URL of the file to build'
         required: true
+      input_user:
+        description: 'Input build user to build'
+        required: false
 
 jobs:
   Build_Status:
