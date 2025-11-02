@@ -8,7 +8,7 @@ on:
         required: true
       input_user:
         description: 'Input build user to build'
-        required: false
+        required: true
 
 jobs:
   Build_Status:
@@ -69,7 +69,9 @@ jobs:
       - name: Working...
         env:
           INPUT_URL: ${{ inputs.input_url }}
+          BUILD_USER: ${{ inputs.input_user }}
         run: |
           cd maianh_hybird_tool
+          echo "$BUILD_USER" > BuildUser
           sudo bash build.sh "$INPUT_URL"
       
