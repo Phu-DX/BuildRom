@@ -63,7 +63,7 @@ jobs:
           
       - name: Giving Premission
         run: |
-          cd oplus-autobuild
+          cd oplus-autobuild_normal
           sudo chmod 777 -R *
 
       - name: Working...
